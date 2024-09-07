@@ -37,6 +37,7 @@ body {
 }
 
 
+
 .card {
     background-color: white;
     padding: 2.4rem;
@@ -46,8 +47,8 @@ body {
         0 0 1px black inset;
     border: 1px solid var(--gray-950);
     max-width: 38.4rem;
-    min-height: 50.1rem;
-    height: 52.8rem;
+    max-height: 52.8rem;
+    margin: 2rem;
 }
 
 .card-contents {
@@ -58,6 +59,7 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
+    flex: 1;
 }
 
 .card-body {
@@ -70,13 +72,46 @@ body {
     line-height: 150%;
 }
 
+
+@media (max-width: 368px) {
+    .card-body h1 {
+        font-size: 2.0rem;
+    }
+}
+
+@media (min-width: 369px) {
+    .card-body h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 322px) {
+
+    .card-body h1 {
+        font-size: 1.8rem;
+    }
+    .card-body p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 323px) {
+    .card-body p {
+        font-size: 1.6rem;
+    }
+}
+
 .card-body h1 {
-    font-size: 2.4rem;
     font-weight: 800;
 }
 
+.card-body h1:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+
 .card-body p {
-    font-size: 1.6rem;
     color: var(--gray-500);
 }
 
@@ -107,8 +142,6 @@ body {
     align-items: center;
     gap: 1.2rem;
     justify-self: flex-end;
-    position: absolute;
-    bottom: 0;
     color: var(--gray-950);
 }
 
@@ -125,9 +158,11 @@ body {
     font-weight: 800;
 }
 
-.attribution { 
-    font-size: 11px;
+.attribution{ 
+    font-size: 1.4rem;
     text-align: center; 
+    font-weight: 500;
+    font-family: "Figtree", sans-serif;
 }
 
 .attribution a { 
